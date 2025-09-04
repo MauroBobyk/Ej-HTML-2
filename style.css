@@ -1,0 +1,64 @@
+/* Selecciona la lista dentro del elemento con id "menu" */
+#menu ul {
+    list-style: none;   /* Elimina los puntos/bullets de la lista */
+    margin: 0;          /* Elimina el margen por defecto */
+    padding: 0;         /* Elimina el padding por defecto */
+}
+
+/* Selecciona los elementos de lista dentro del elemento con id "menu" */
+#menu ul li {
+    background-color: #2e518b;  /* Establece color de fondo azul oscuro */
+}
+
+/* Selecciona los enlaces dentro de listas en el elemento con id "menu" */
+#menu ul a {
+    display: block;           /* Convierte el enlace en elemento de bloque */
+    color: #fff;              /* Texto color blanco */
+    text-decoration: none;    /* Elimina el subrayado de los enlaces */
+    font-weight: 400;         /* Grosor de fuente normal */
+    font-size: 15px;          /* Tamaño de fuente 15px */
+    padding: 10px;            /* Espaciado interno de 10px */
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Familia tipográfica */
+    text-transform: uppercase; /* Convierte texto a mayúsculas */
+    letter-spacing: 1px;      /* Espaciado entre letras de 1px */
+}
+
+/* Selecciona los elementos de lista dentro del elemento con id "menu" */
+#menu ul li {
+    position: relative;  /* Establece posicionamiento relativo para contener elementos absolutos */
+    float: left;         /* Hace que los elementos floten a la izquierda (para menú horizontal) */
+    margin: 0;           /* Sin margen */
+    padding: 0;          /* Sin padding */
+}
+
+/* Efecto al pasar el cursor sobre los elementos de lista */
+#menu ul li:hover {
+    background: #5b78a7;  /* Cambia color de fondo a azul más claro al hacer hover */
+}
+
+/* Estilos para submenús (listas anidadas) */
+#menu ul ul {
+    display: none;        /* Oculta los submenús por defecto */
+    position: absolute;   /* Posicionamiento absoluto respecto al elemento padre relativo */
+    top: 100%;            /* Coloca el submenú justo debajo del elemento padre */
+    left: 0;              /* Alinea a la izquierda del elemento padre */
+    background: #eee;     /* Fondo gris claro para el submenú */
+    padding: 0;           /* Sin padding */
+}
+
+/* Elementos de lista dentro de submenús */
+#menu ul ul li {
+    float: none;    /* Anula el float left para que se muestren en columna */
+    width: 150px;   /* Ancho fijo de 150px para los elementos del submenú */
+}
+
+/* Enlaces dentro de submenús */
+#menu ul ul a {
+    line-height: 120%;   /* Altura de línea del 120% */
+    padding: 10px 15px;  /* Padding vertical 10px, horizontal 15px */
+}
+
+/* Muestra el submenú cuando se hace hover sobre el elemento de lista padre */
+#menu ul li:hover > ul {
+    display: block;  /* Cambia a display block para mostrar el submenú */
+}
